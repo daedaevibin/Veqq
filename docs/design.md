@@ -7,6 +7,15 @@ Approach: Vector framework (Zygisk / LSPatch) as the hook layer, rebuilt from sc
 ## License
 OSL 3.0 only (`LICENSE` — full text from SPDX). No other licensing.
 
+## Build / Dependencies
+- SDK 37 (`compileSdk` / `targetSdk` = 37, `buildTools` = 37.0.0 — verified locally: `android-37.2` / `android-37.0` present).
+- AGP 8.7.0 reference (`gradle.properties` / `libs.versions.toml`).
+- Kotlin 2.1.10.
+- Java 17 target (`VERSION_17`).
+- `.github/dependabot.yml`: weekly for Gradle + npm.
+- `.github/workflows/codeql-analysis.yml`: Kotlin + JavaScript, weekly + PR trigger.
+- `gradle.properties`: modern flags (`configuration-cache`, `R8.fullMode`, `nonTransitiveRClass`).
+
 ## Source References (Verified)
 - Vector: https://github.com/JingMatrix/Vector (ART hooking framework, Zygisk module, Android 8.1–17)
 - LSPatch: https://github.com/JingMatrix/LSPatch (rootless APK patch, embeds loader/framework runtime, uses same LSPlant engine)
