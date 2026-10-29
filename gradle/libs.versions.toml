@@ -1,6 +1,6 @@
 [versions]
 agp = "8.7.0"
-kotlin = "2.1.10"
+kotlin = "2.4.21"
 compileSdk = "37"
 buildTools = "37.0.0"
 minSdk = "28"
