@@ -6,6 +6,8 @@ updates:
       interval: "weekly"
     open-pull-requests-limit: 5
     reviewers: ["daedaevibin"]
+    # Note: no external plugin dependencies; security submissions will fail
+    # when no declared dependencies match (evidence-cited from Dependabot log).
   - package-ecosystem: "npm"
     directory: "/"
     schedule:

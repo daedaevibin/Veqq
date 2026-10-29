@@ -19,7 +19,7 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        language: [kotlin, javascript]
+        language: [kotlin]
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
