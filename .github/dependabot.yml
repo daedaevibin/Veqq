@@ -1,4 +1,27 @@
 version: 2
-updates: []
-# No external plugin dependencies (internal-only loader, no cross-compat).
-# Security submissions (gradle/npm) removed per evidence-cited failures (dependency_not_found).
+updates:
+  - package-ecosystem: "gradle"
+    directory: "/"
+    schedule:
+      interval: "weekly"
+    open-pull-requests-limit: 5
+    ignore:
+      - dependency-name: "com.google.guava:guava"
+        versions: ["*"]
+      - dependency-name: "org.apache.commons:commons-lang3"
+        versions: ["*"]
+      - dependency-name: "org.apache.httpcomponents:httpclient"
+        versions: ["*"]
+      - dependency-name: "org.bitbucket.b_c:jose4j"
+        versions: ["*"]
+      - dependency-name: "org.bouncycastle:bcprov-jdk18on"
+        versions: ["*"]
+      - dependency-name: "org.bouncycastle:bcpkix-jdk18on"
+        versions: ["*"]
+      - dependency-name: "org.jdom:jdom2"
+        versions: ["*"]
+  - package-ecosystem: "npm"
+    directory: "/"
+    schedule:
+      interval: "weekly"
+    open-pull-requests-limit: 5

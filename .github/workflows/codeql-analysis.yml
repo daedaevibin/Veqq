@@ -20,14 +20,22 @@ jobs:
       fail-fast: false
       matrix:
         language: [kotlin]
+    env:
+      ANDROID_HOME: ${{ github.workspace }}/android-sdk
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
+      - name: Setup Android SDK
+        uses: android-actions/setup-android@v3
+        with:
+          api-level: 37
       - name: Initialize CodeQL
         uses: github/codeql-action/init@v3
         with:
           languages: ${{ matrix.language }}
-          build-mode: none
+          build-mode: manual
+      - name: Build
+        run: ./gradlew build --no-daemon
       - name: Perform CodeQL Analysis
         uses: github/codeql-action/analyze@v3
         with:
