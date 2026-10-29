@@ -16,8 +16,6 @@ jobs:
       actions: read
       contents: read
       security-events: write
-    env:
-      ANDROID_HOME: /opt/Android/Sdk
     strategy:
       fail-fast: false
       matrix:
@@ -29,10 +27,7 @@ jobs:
         uses: github/codeql-action/init@v3
         with:
           languages: ${{ matrix.language }}
-          build-mode: manual
-          output: sarif_output
-      - name: Build
-        run: ./gradlew build --no-daemon
+          build-mode: auto
       - name: Perform CodeQL Analysis
         uses: github/codeql-action/analyze@v3
         with:
