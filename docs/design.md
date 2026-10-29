@@ -4,6 +4,9 @@ New system, not a shiggy rework. Internal-only. No cross-compatibility with othe
 
 Approach: Vector framework (Zygisk / LSPatch) as the hook layer, rebuilt from scratch.
 
+## License
+OSL 3.0 only (`LICENSE` — full text from SPDX). No other licensing.
+
 ## Source References (Verified)
 - Vector: https://github.com/JingMatrix/Vector (ART hooking framework, Zygisk module, Android 8.1–17)
 - LSPatch: https://github.com/JingMatrix/LSPatch (rootless APK patch, embeds loader/framework runtime, uses same LSPlant engine)
