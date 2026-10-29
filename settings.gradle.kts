@@ -1,6 +1,5 @@
-# SDK 37 (verified present locally: android-37.2)
-# AGP 8.7.0 (latest stable reference)
-# Build Tools 37.0.0 (verified present locally)
+// SDK 37 (verified present locally: android-37.2 / android-37.0)
+// AGP 9.5.0 (updated via merged PR), build tools 37.0.0
 
 pluginManagement {
     repositories {

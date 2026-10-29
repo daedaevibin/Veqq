@@ -28,9 +28,10 @@ jobs:
         with:
           languages: ${{ matrix.language }}
           build-mode: manual
+          output: sarif_output
       - name: Build
         run: ./gradlew build --no-daemon 2>/dev/null || echo 'No Gradle build'
       - name: Perform CodeQL Analysis
         uses: github/codeql-action/analyze@v3
         with:
-          category: "/language:${{matrix.language}}"
+          output: sarif_output
