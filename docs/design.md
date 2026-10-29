@@ -8,9 +8,7 @@ Approach: Vector framework (Zygisk / LSPatch) as the hook layer, rebuilt from sc
 OSL 3.0 only (`LICENSE` — full text from SPDX). No other licensing.
 
 ## Build / Dependencies
-- SDK 37 (`compileSdk` / `targetSdk` = 37, `buildTools` = 37.0.0 — verified locally: `android-37.2` / `android-37.0` present).
-- AGP 8.7.0 reference (`gradle.properties` / `libs.versions.toml`).
-- Kotlin 2.1.10.
+- SDK 37 (`compileSdk` / `targetSdk` 37), AGP 9.5.0 (merged via PR), Kotlin 2.4.21, build-tools 37.0.0.
 - Java 17 target (`VERSION_17`).
 - `.github/dependabot.yml`: weekly for Gradle + npm.
 - `.github/workflows/codeql-analysis.yml`: Kotlin + JavaScript, weekly + PR trigger.
