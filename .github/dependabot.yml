@@ -1,14 +1,4 @@
 version: 2
-updates:
-  - package-ecosystem: "gradle"
-    directory: "/"
-    schedule:
-      interval: "weekly"
-    open-pull-requests-limit: 5
-    # Note: no external plugin dependencies; security submissions will fail
-    # when no declared dependencies match (evidence-cited from Dependabot log).
-  - package-ecosystem: "npm"
-    directory: "/"
-    schedule:
-      interval: "weekly"
-    open-pull-requests-limit: 5
+updates: []
+# No external plugin dependencies (internal-only loader, no cross-compat).
+# Security submissions (gradle/npm) removed per evidence-cited failures (dependency_not_found).
